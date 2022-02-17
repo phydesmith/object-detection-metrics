@@ -77,7 +77,7 @@ def match_preds_to_targets(predictions_df, labels_df):
 
         # create lists of the label bboxes and classes
         labels_image_bboxes = labels[['xmin', 'ymin', 'xmax', 'ymax']].values.tolist()
-        labels_image_class_labels = labels['label'].values.tolist()
+        labels_image_class_labels = labels[['label']].values.tolist()
 
         # add the label lists for the image
         target_class_labels.append(labels_image_class_labels)
